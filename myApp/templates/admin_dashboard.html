@@ -1,0 +1,163 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-grid.min.css' %}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- <a href="styles.css"></a> -->
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            YALEN COMMERCIAL VENTURES
+        </div>
+        <div class="links">
+            <ul>
+                <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'users' %}">Users</a></li>
+                <li><a href="{% url 'services' %}">Services</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <!-- openning sidebar navigation -->
+                <button class="sidebar-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <!-- closing sidebar navigation -->
+                <div class="sidebar-close">
+                    <i class="fas fa-times"></i>
+                </div>
+                <h2>Admin Dashboard</h2>
+                <!-- sidebar search -->
+                <div class="sidebar-search">
+                    <input type="text" placeholder="Search...">
+                    <button type="submit">Search</button>
+                </div>
+                <!-- sidebar notification -->
+                <div class="sidebar-notification">
+                    <i class="fas fa-bell"></i>
+                </div>
+                <!-- sidebar user -->
+                <div class="sidebar-user">
+                    <img src="{% static 'images/user.png' %}" alt="User Image">
+                    <span>KELVIN NYALE KITI</span>
+                    <!-- <i class="fas fa-caret-down"></i> -->
+                </div>
+            </div>
+            <div class="sidebar-menu">
+                <ul>
+                    <!-- <li>
+                        <select>
+                            <option value="ad"><a href="users.html">Users</a></option>
+                            <option value="tr"><a href="#">Trainers</a></option>
+                            <option value="cl"><a href="#">Trainees</a></option>
+                        </select>
+                    </li> -->
+                    <li><a href="{% url 'dashboard' %}"><i class="fas fa-tachometer-alt"></i>Dashboard</a></li>
+                    <li><a href="{% url 'users' %}"><i class="fas fa-users"></i>Users</a></li>
+                    <li><a href="{% url 'services' %}"><i class="fas fa-concierge-bell"></i>Services</a></li>
+                    <li><a href="{% url 'products' %}"><i class="fas fa-box-open"></i>Products</a></li>
+                    <li><a href="{% url 'cart' %}"><i class="fas fa-shopping-cart"></i>Cart</a></li>
+                    <li><a href="{% url 'categories' %}"><i class="fas fa-th-large"></i>Categories</a></li>
+                    <li><a href="{% url '#' %}"><i class="fas fa-exchange-alt"></i>Transactions</a></li><br><br>
+                    <a href="logout.html">Logout</a>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="content">
+            <h1>Welcome to the admin dashboard</h1>
+            <!-- <p>This is the dashboard page.</p> -->
+            <div class="nav-links">
+                <div class="users">
+                    <a href="#">Users</a>
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="products">
+                    <a href="#">Products</a>
+                    <i class="fas fa-box-open"></i>
+                </div>
+                <div class="services">
+                    <a href="#">Services</a>
+                    <i class="fas fa-concierge-bell"></i>
+                </div>
+                <div class="categories">
+                    <a href="#">Product Categories</a>
+                    <i class="fas fa-th-large"></i>
+                </div>
+            </div>
+            
+{#            <div class="table">#}
+{#                <table>#}
+{#                    <thead>#}
+{#                        <tr>#}
+{#                            <th>ID</th>#}
+{#                            <th>Name</th>#}
+{#                            <th>Email</th>#}
+{#                            <th>Action</th>#}
+{#                        </tr>#}
+{#                    </thead>#}
+{#                    <tbody>#}
+{#                        <tr>#}
+{#                            <td>1</td>#}
+{#                            <td>John Doe</td>#}
+{#                            <td>johndoe@example.com</td>#}
+{#                            <td>#}
+{#                                <a href="#" class="update">Update</a>#}
+{#                                <a href="#" class="delete">Delete</a>#}
+{#                                <a href="#" class="viewdetails">View Details</a>#}
+{#                            </td>#}
+{#                        </tr>#}
+{#                        <tr>#}
+{#                            <td>2</td>#}
+{#                            <td>Jane Smith</td>#}
+{#                            <td>janesmith@example.com</td>#}
+{#                            <td>#}
+{#                                <a href="#" class="update">Update</a>#}
+{#                                <a href="#" class="delete">Delete</a>#}
+{#                                <a href="#" class="viewdetails">View Details</a>#}
+{#                            </td>#}
+{#                        </tr>#}
+{#                        <tr>#}
+{#                            <td>3</td>#}
+{#                            <td>Bob Johnson</td>#}
+{#                            <td>bobjohnson@example.com</td>#}
+{#                            <td>#}
+{#                                <a href="#" class="update">Update</a>#}
+{#                                <a href="#" class="delete">Delete</a>#}
+{#                                <a href="#" class="viewdetails">View Details</a>#}
+{#                            </td>#}
+{#                        </tr>#}
+{#                    </tbody>#}
+{#                </table><br><br>#}
+                <div class="pagination">
+                    <a href="#" class="prev">Previous</a>
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#" class="next">Next</a><br><br>
+                    <div class="page-count">Total pages: 3</div><br><br>
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search...">
+                        <button type="submit">Search</button>
+                    </div>
+                </div>
+            </div><br><br>
+            
+        </div>
+    </div>
+    <div class="footer">
+        &copy; 2024 Yalen Commercial Ventures. All rights reserved.
+    </div>
+</body>
+</html>

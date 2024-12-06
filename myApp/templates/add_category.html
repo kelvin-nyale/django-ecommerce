@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addcategory</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="form-box">
+        <h2>Add New Category</h2>
+        <form method="POST" action="{% url 'add_user' %}" id="addUserForm">
+            <label for=category_id">Category ID:</label>
+            <input type="text" id="category_id" name="category_id" required>
+            <br><br>
+            <label for="category_name">Category Name:</label>
+            <input type="text" id="category_name" name="category_name" required>
+            <br><br>
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" required>
+            <br><br>
+            <input type="submit" value="Save in Categories">
+            <a href="{% url 'categories' %}">Cancel</a>
+        </form><br><br>
+        <!-- <div id="errorMessages"></div>
+        <div id="successMessage"></div> -->
+    </div>
+    <div class="footer">
+        &copy; 2024 Yalen Commercial Adventures. All rights reserved.
+    </div>
+</body>
+</html>

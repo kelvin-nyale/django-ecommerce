@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>services</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            YALEN COMMERCIAL ADVENTURES
+        </div>
+        <div class="links">
+            <ul>
+                <li><a href="{% url 'admin_dashboard' %}">Dashboard</a></li>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'users' %}">Users</a></li>
+                <li><a href="{% url 'services' %}">Services</a></li>
+                <li><a href="{% url '#' %}">Services</a></li>
+            </ul>
+        </div>
+    </div>
+    <h2>Services</h2>
+    <div class="content">
+        <div class="table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Service Name</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- {% for user in users %} -->
+                    <tr>
+                        <td>{{ service.id }}</td>
+                        <td>{{ service.service_name }}</td>
+                        <td>{{ service.description }}</td>
+                        <td>{{ service.price }}</td>
+                        <td>
+                            <a href="{% url 'update_service' service.id %}" class="update">Update</a>
+                            <a href="{% url 'delete_service' service.id %}" class="delete">Delete</a>
+                            <a href="{% url 'service_detail' service.id %}" class="viewdetails">View Detail</a>
+                        </td>
+                    </tr>
+                    <!-- {% endfor %} -->
+                </tbody>
+            </table>
+            <div class="pagination">
+                <a href="#" class="prev">Previous</a>
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#" class="next">Next</a><br><br>
+                <div class="page-count">Total pages: 3</div><br><br>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                    <button type="submit">Search</button>
+                </div>
+            </div>
+        </div>
+    </div><br><br>
+
+    <a href="{% url 'add_service' %}" class="adding">Add New Service</a><br><br><br><br>
+    <div class="footer">
+        <div class="copyright">
+            &copy; 2024 Yalen Commercial Adventures. All rights reserved.
+        </div>
+    </div>
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>

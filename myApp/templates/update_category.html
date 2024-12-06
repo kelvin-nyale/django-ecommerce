@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>update category</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <form method="post" action="{% url 'update_category' %}">
+        <label for="category-id">Category Id:</label>
+        <input type="text" id="category_id" name="category_id"><br>
+        <label for="category_name">Category Name:</label>
+        <input type="text" id="category_name" name="category_name"><br>
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description"><br>
+        <button type="submit">Update Changes</button>
+    </form>
+</body>
+</html>

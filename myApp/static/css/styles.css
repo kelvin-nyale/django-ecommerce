@@ -1,0 +1,296 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: rgb(2, 3, 39);
+    color: #f5f5dc;
+/* services header file */
+/* h2{
+    color: #f5f5dc;
+    text-align: center;
+} */
+}
+/* DASHBOARD STYLINGS */
+/* .navbar */
+.navbar{
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    background: #333;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .logo{
+        padding: 20px;
+        font-size: larger;
+        color: #f5f5dc;
+    }
+    .links{
+        ul{
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            
+            li{
+                a{
+                    padding: 15px;
+                    color: #fff;
+                    font-size: 20px;
+                    text-decoration: none;
+                }
+            }
+        }
+        
+    }
+}
+
+.main-content{
+    /* height: calc(100vh - 80px); */
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+/* sidebar stylings */
+.sidebar{
+    /* height: 600px; */
+    width: 250px;
+    background-color: cadetblue;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+
+    .sidebar-header{
+        /* display: flex;
+        flex-wrap: wrap; */
+
+        h2{
+            text-align: center;
+            color: #fff;
+        }
+
+        /* .sidebar-toggle,
+        .sidebar-close,
+        .sidebar-search,
+        .sidebar-notification,
+        .sidebar-user{
+            color: #111;
+        } */
+        .sidebar-user{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            align-items: center;
+            padding-top: 5px;
+
+            img{
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                background-color: #ccc;
+            }
+        }
+        span{
+            color: #f5f5dc;
+            font-size: medium;
+            padding-top: 5px;
+        }
+    }
+    .sidebar-menu{
+        ul{
+            gap: 15px;
+            
+            li{
+                list-style: none;
+                padding: 10px;
+                
+
+                a{
+                    border-radius: 2px;
+                    /* background-color: rgb(31, 143, 218); */
+                    color: #fff;
+                    text-decoration: none;
+                    font-size: larger;
+                    cursor: pointer;
+                }
+                a:hover{
+                    color: crimson;
+                }
+            }
+        }
+    }
+}
+/* MAIN DASHBOARD CONTENT STYLINGS */
+.content{
+    /* height: calc(100vh - 80px); */
+    flex-grow: 1;
+    background-color: rgb(2, 3, 39);
+    padding-top: 80px;
+    padding-left: 20px;
+
+    h1{
+        color: #f5f5dc;
+        font-size: 40px;
+    }
+    .nav-links{
+        display: flex;
+        gap: 15px;
+        align-items: center;
+
+        .users, .products, .services, .categories{
+                    
+            height: 130px;
+            width: 230px;
+            border-radius: 2px;
+            text-decoration: none;
+            font-size: larger;
+            cursor: pointer;
+            a{
+                padding-top: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                text-decoration: none;
+                color: #fff;
+            }
+            /* i{
+                color: #111;
+                background-color: #111;
+            } */
+        }
+        .users{
+            background-color: rgb(31, 143, 218);
+            border: 1px solid #fff;
+            color: #fff;
+        }
+        .products{
+            background-color: rgb(255, 165, 0);
+            border: 1px solid #fff;
+            color: #fff;
+        }
+        .services{
+            background-color: rgb(138, 43, 226);
+            border: 1px solid #fff;
+            color: #fff;
+        }
+        .categories{
+            background-color: rgb(128, 0, 0);
+            border: 1px solid #fff;
+            color: #fff;
+        }
+    }
+    /* table stylings  */
+    .table{
+        padding-top: 20px;
+    }     
+    table{
+        border-collapse: collapse;
+        width: 100%;
+    }
+    thead{
+        background-color: teal;
+    }
+    th,td{
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+        font-size: large;
+
+        a{
+            text-decoration: none;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 2px;
+
+        }
+        .update{
+            background-color: #00f;
+            color: #fff;
+        }
+        .delete{
+            background-color: crimson;
+            color: #fff;
+        }
+        .viewdetails{
+            background-color: rgb(0, 153, 255);
+            color: #fff;
+        }
+    }
+    .pagination{
+        /* display: flex; */
+        gap: 20px;
+
+        .prev, .active, .next, .page-count{
+            color: #fff;
+        }
+        .search-bar{
+            display: flex;
+            gap: 40px;
+
+            input{
+                height: 35px;
+                width: 500px;
+            }
+            button{
+                height: 40px;
+                width: 150px;
+            }
+        }
+    }
+    
+}
+a{
+    text-decoration: none;
+}
+.adding{
+    float: right;
+    background-color: rgb(12, 142, 223);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 2px;
+    margin-top: 20px;
+    height: 30px;
+    width: 130px;
+}
+.footer{
+    padding: 10px;
+    /*align-items: center;*/
+    background-color: #333;
+    color: #f5f5dc;
+    font-size: large;
+    height: max-content;
+    width: 100%;
+}
+/* register/login styling */
+.form-box{
+    padding-left: 400px;
+    padding-top: 100px;
+}
+form.register,form.login{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 400px;
+    padding: 10px;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 2px;
+
+    input{
+        height: 30px;
+    }
+    label a{
+        color: #fff;
+    }
+    select {
+        height: 35px;
+    }
+}
+
+
+
+

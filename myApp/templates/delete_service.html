@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>delete service</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Confirm before you delete this service.</h1>
+
+    <form action="/delete_user" method="post">
+        <input type="hidden" name="userId" value="{{ service.service_name }}">
+        <button type="submit">Delete this Service</button>
+        <a href="{% url 'services' %}">Cancel</a>
+    </form>
+</body>
+</html>

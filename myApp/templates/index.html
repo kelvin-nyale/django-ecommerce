@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yalen Commercial Ventures</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            YALEN COMMERCIAL ADVENTURES
+        </div>
+        <div class="links">
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'admin_dashboard' %}">Dashboard</a></li>
+                <li><a href="{% url 'user_dashboard' %}">User Dashboard</a></li>
+                <!-- <li><a href="users.html">Users</a></li> -->
+                <!-- <li><a href="services.html">Services</a></li> -->
+                <li><a href="#">Services</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'register' %}">Register for Free</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

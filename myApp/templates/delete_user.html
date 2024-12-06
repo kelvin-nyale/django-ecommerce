@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>delete user</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Confirm before you delete</h1>
+
+    <form action="/delete-user" method="post">
+        <input type="hidden" name="userId" value="{{ user.name }}">
+        <button type="submit">Delete this User</button>
+        <a href="{% url 'users' %}">Cancel</a>
+    </form>
+</body>
+</html>

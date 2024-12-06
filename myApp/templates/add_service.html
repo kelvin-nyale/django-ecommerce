@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adduser</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="form-box">
+        <h2>Add New Service</h2>
+        <form method="post" action="{% url 'add_service' %}" id="addUserForm">
+            <label for="service_name">Service_name:</label>
+            <input type="text" id="name" name="name" required>
+            <br><br>
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" required>
+            <br><br>
+            <label for="price">Price:</label>
+            <input type="numeric" id="price" name="price" required>
+            <br><br>
+            <input type="submit" value="Save in Users">
+            <a href="{% url 'services' %}">Cancel</a>
+        </form>
+{#        <div id="errorMessages"></div>#}
+{#        <div id="successMessage"></div>#}
+    </div>
+    <div class="footer">
+        &copy; 2024 Yalen Commercial Adventures. All rights reserved.
+    </div>
+</body>
+</html>

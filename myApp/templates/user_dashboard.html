@@ -1,0 +1,64 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>user dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo">
+            YALEN COMMERCIAL ADVENTURES
+        </div>
+        <div class="links">
+            <ul>
+                <li><a href="{% url 'user_dashboard' %}">Dashboard</a></li>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'products' %}">Products</a></li>
+                <li><a href="{% url 'services' %}">Services</a></li>
+{#                <li><a href="{% url '#' %}">Services</a></li>#}
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <h1>Welcome back {{ user.user_name }}</h1>
+            <!-- <p>This is the dashboard page.</p> -->
+        <div class="nav-links">
+            <div class="users">
+                <a href="#">Users</a>
+                <i class="fas fa-users"></i>
+            </div>
+            <div class="products">
+                <a href="#">Products</a>
+                <i class="fas fa-box-open"></i>
+            </div>
+            <div class="services">
+                <a href="#">Services</a>
+                <i class="fas fa-concierge-bell"></i>
+            </div>
+            <div class="categories">
+                <a href="#">Product Categories</a>
+                <i class="fas fa-th-large"></i>
+            </div>
+        </div>
+        <div class="pagination">
+            <a href="#" class="prev">Previous</a>
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#" class="next">Next</a><br><br>
+            <div class="page-count">Total pages: 3</div><br><br>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button type="submit">Search</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
